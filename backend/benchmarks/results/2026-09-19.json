@@ -1,0 +1,333 @@
+{
+  "date": "2026-09-19",
+  "machine": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "cpu_count": 32,
+    "python": "3.10.11",
+    "neo4j": "Neo4j Kernel 5.26.30 community"
+  },
+  "query": {
+    "depth": 3,
+    "samples": 100,
+    "warmup": 5,
+    "min_confidence": 0.5
+  },
+  "repos": [
+    {
+      "name": "flask",
+      "commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+      "files": 83,
+      "loc": 13301,
+      "parse_failures": 0,
+      "parse_seconds": 0.236,
+      "resolve_seconds": 0.023,
+      "nodes": 1705,
+      "edges": 3459,
+      "call_edges": 2793,
+      "resolution": {
+        "call_sites_total": 3854,
+        "resolved_exact": 818,
+        "resolved_inferred": 329,
+        "resolved_ambiguous": 890,
+        "dropped_builtin": 484,
+        "dropped_external": 1262,
+        "dropped_too_ambiguous": 0,
+        "unresolved": 71,
+        "internal_call_sites": 2108,
+        "exact_rate": 0.2122,
+        "resolution_rate": 0.5285,
+        "internal_exact_rate": 0.388,
+        "internal_resolution_rate": 0.9663
+      },
+      "write_seconds": 0.657,
+      "total_seconds": 0.928,
+      "stored_call_edges": 2793,
+      "impact_latency": {
+        "samples": 100,
+        "p50_ms": 2.27,
+        "p95_ms": 5.15,
+        "p99_ms": 6.06,
+        "max_ms": 7.08,
+        "median_result_size": 4.0
+      },
+      "runs": 3,
+      "first_run_parse_seconds": 0.236,
+      "all_runs": [
+        {
+          "parse_seconds": 0.236,
+          "resolve_seconds": 0.023,
+          "write_seconds": 0.863,
+          "total_seconds": 1.122
+        },
+        {
+          "parse_seconds": 0.195,
+          "resolve_seconds": 0.018,
+          "write_seconds": 0.58,
+          "total_seconds": 0.793
+        },
+        {
+          "parse_seconds": 0.246,
+          "resolve_seconds": 0.025,
+          "write_seconds": 0.657,
+          "total_seconds": 0.928
+        }
+      ]
+    },
+    {
+      "name": "requests",
+      "commit": "dae7ef63b4df6eded86637f251fc4e3a06c3b479",
+      "files": 37,
+      "loc": 9048,
+      "parse_failures": 0,
+      "parse_seconds": 0.139,
+      "resolve_seconds": 0.012,
+      "nodes": 844,
+      "edges": 1904,
+      "call_edges": 1442,
+      "resolution": {
+        "call_sites_total": 2562,
+        "resolved_exact": 789,
+        "resolved_inferred": 219,
+        "resolved_ambiguous": 294,
+        "dropped_builtin": 431,
+        "dropped_external": 822,
+        "dropped_too_ambiguous": 0,
+        "unresolved": 7,
+        "internal_call_sites": 1309,
+        "exact_rate": 0.308,
+        "resolution_rate": 0.5082,
+        "internal_exact_rate": 0.6028,
+        "internal_resolution_rate": 0.9947
+      },
+      "write_seconds": 0.468,
+      "total_seconds": 0.612,
+      "stored_call_edges": 1442,
+      "impact_latency": {
+        "samples": 100,
+        "p50_ms": 2.72,
+        "p95_ms": 6.65,
+        "p99_ms": 8.07,
+        "max_ms": 9.02,
+        "median_result_size": 15.0
+      },
+      "runs": 3,
+      "first_run_parse_seconds": 0.133,
+      "all_runs": [
+        {
+          "parse_seconds": 0.133,
+          "resolve_seconds": 0.011,
+          "write_seconds": 0.468,
+          "total_seconds": 0.612
+        },
+        {
+          "parse_seconds": 0.162,
+          "resolve_seconds": 0.012,
+          "write_seconds": 0.483,
+          "total_seconds": 0.657
+        },
+        {
+          "parse_seconds": 0.139,
+          "resolve_seconds": 0.021,
+          "write_seconds": 0.409,
+          "total_seconds": 0.569
+        }
+      ]
+    },
+    {
+      "name": "httpx",
+      "commit": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+      "files": 60,
+      "loc": 13800,
+      "parse_failures": 0,
+      "parse_seconds": 0.206,
+      "resolve_seconds": 0.021,
+      "nodes": 1301,
+      "edges": 4168,
+      "call_edges": 2917,
+      "resolution": {
+        "call_sites_total": 4073,
+        "resolved_exact": 1443,
+        "resolved_inferred": 386,
+        "resolved_ambiguous": 389,
+        "dropped_builtin": 779,
+        "dropped_external": 1017,
+        "dropped_too_ambiguous": 57,
+        "unresolved": 2,
+        "internal_call_sites": 2277,
+        "exact_rate": 0.3543,
+        "resolution_rate": 0.5446,
+        "internal_exact_rate": 0.6337,
+        "internal_resolution_rate": 0.9741
+      },
+      "write_seconds": 0.484,
+      "total_seconds": 0.71,
+      "stored_call_edges": 2917,
+      "impact_latency": {
+        "samples": 100,
+        "p50_ms": 2.47,
+        "p95_ms": 8.19,
+        "p99_ms": 11.86,
+        "max_ms": 18.85,
+        "median_result_size": 2.0
+      },
+      "runs": 3,
+      "first_run_parse_seconds": 0.205,
+      "all_runs": [
+        {
+          "parse_seconds": 0.205,
+          "resolve_seconds": 0.021,
+          "write_seconds": 0.484,
+          "total_seconds": 0.71
+        },
+        {
+          "parse_seconds": 0.214,
+          "resolve_seconds": 0.023,
+          "write_seconds": 0.436,
+          "total_seconds": 0.673
+        },
+        {
+          "parse_seconds": 0.206,
+          "resolve_seconds": 0.02,
+          "write_seconds": 0.489,
+          "total_seconds": 0.715
+        }
+      ]
+    },
+    {
+      "name": "rich",
+      "commit": "9d8f9a372cc5916fd4781fec207ced7ddac2f08f",
+      "files": 213,
+      "loc": 45223,
+      "parse_failures": 0,
+      "parse_seconds": 0.535,
+      "resolve_seconds": 0.044,
+      "nodes": 2309,
+      "edges": 7512,
+      "call_edges": 4713,
+      "resolution": {
+        "call_sites_total": 8095,
+        "resolved_exact": 3337,
+        "resolved_inferred": 1106,
+        "resolved_ambiguous": 464,
+        "dropped_builtin": 1639,
+        "dropped_external": 1530,
+        "dropped_too_ambiguous": 8,
+        "unresolved": 11,
+        "internal_call_sites": 4926,
+        "exact_rate": 0.4122,
+        "resolution_rate": 0.6062,
+        "internal_exact_rate": 0.6774,
+        "internal_resolution_rate": 0.9961
+      },
+      "write_seconds": 0.707,
+      "total_seconds": 1.267,
+      "stored_call_edges": 4713,
+      "impact_latency": {
+        "samples": 100,
+        "p50_ms": 2.18,
+        "p95_ms": 4.76,
+        "p99_ms": 10.12,
+        "max_ms": 10.3,
+        "median_result_size": 4.0
+      },
+      "runs": 3,
+      "first_run_parse_seconds": 0.564,
+      "all_runs": [
+        {
+          "parse_seconds": 0.564,
+          "resolve_seconds": 0.044,
+          "write_seconds": 0.787,
+          "total_seconds": 1.395
+        },
+        {
+          "parse_seconds": 0.51,
+          "resolve_seconds": 0.05,
+          "write_seconds": 0.707,
+          "total_seconds": 1.267
+        },
+        {
+          "parse_seconds": 0.535,
+          "resolve_seconds": 0.044,
+          "write_seconds": 0.676,
+          "total_seconds": 1.255
+        }
+      ]
+    },
+    {
+      "name": "django",
+      "commit": "446d9cf602a5c42862da118b714a5679bb61cf27",
+      "files": 2616,
+      "loc": 398470,
+      "parse_failures": 6,
+      "parse_seconds": 8.21,
+      "resolve_seconds": 1.099,
+      "nodes": 43926,
+      "edges": 128776,
+      "call_edges": 90454,
+      "resolution": {
+        "call_sites_total": 155489,
+        "resolved_exact": 51027,
+        "resolved_inferred": 5700,
+        "resolved_ambiguous": 11168,
+        "dropped_builtin": 14936,
+        "dropped_external": 54956,
+        "dropped_too_ambiguous": 4349,
+        "unresolved": 13353,
+        "internal_call_sites": 85597,
+        "exact_rate": 0.3282,
+        "resolution_rate": 0.4367,
+        "internal_exact_rate": 0.5961,
+        "internal_resolution_rate": 0.7932
+      },
+      "write_seconds": 18.375,
+      "total_seconds": 29.907,
+      "stored_call_edges": 90454,
+      "impact_latency": {
+        "samples": 100,
+        "p50_ms": 4.15,
+        "p95_ms": 11.2,
+        "p99_ms": 21.68,
+        "max_ms": 55.04,
+        "median_result_size": 5.0
+      },
+      "runs": 3,
+      "first_run_parse_seconds": 7.486,
+      "all_runs": [
+        {
+          "parse_seconds": 7.486,
+          "resolve_seconds": 0.893,
+          "write_seconds": 17.828,
+          "total_seconds": 26.207
+        },
+        {
+          "parse_seconds": 8.21,
+          "resolve_seconds": 1.11,
+          "write_seconds": 26.279,
+          "total_seconds": 35.599
+        },
+        {
+          "parse_seconds": 10.433,
+          "resolve_seconds": 1.099,
+          "write_seconds": 18.375,
+          "total_seconds": 29.907
+        }
+      ]
+    }
+  ],
+  "micro": {
+    "batching": {
+      "edges": 3000,
+      "one_by_one_seconds": 9.643,
+      "batched_seconds": 0.162,
+      "speedup": 59.4,
+      "batch_size": 1000
+    },
+    "constraints": {
+      "nodes": 4000,
+      "without_constraint_seconds": 1.936,
+      "with_constraint_seconds": 0.113,
+      "speedup": 17.1
+    }
+  }
+}

@@ -1,0 +1,1043 @@
+{
+  "description": "Hand-labelled call sites. Each label states where a call expression really resolves, written by reading source and never copied from Faultline's output. expected_target is null when the callee is outside the repository.",
+  "repos": {
+    "flask": {
+      "url": "https://github.com/pallets/flask",
+      "commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+      "analyse": ".",
+      "held_out": false
+    },
+    "fixture": {
+      "path": "tests/fixtures/sample_project",
+      "analyse": ".",
+      "held_out": false
+    },
+    "requests": {
+      "url": "https://github.com/psf/requests",
+      "commit": "dae7ef63b4df6eded86637f251fc4e3a06c3b479",
+      "analyse": ".",
+      "held_out": true,
+      "note": "Labelled AFTER the resolver had been tuned against the flask sample, and never used to tune it. This is the generalisation estimate."
+    }
+  },
+  "labels": [
+    {
+      "repo": "fixture",
+      "file": "shop/cycle_a.py",
+      "line": 7,
+      "callee": "cycle_b.pong",
+      "expected_target": "shop.cycle_b.pong"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/cycle_b.py",
+      "line": 7,
+      "callee": "cycle_a.ping",
+      "expected_target": "shop.cycle_a.ping"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/models.py",
+      "line": 8,
+      "callee": "self.label",
+      "expected_target": "shop.models.Base.label"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/models.py",
+      "line": 22,
+      "callee": "self.validate",
+      "expected_target": "shop.models.User.validate"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/models.py",
+      "line": 25,
+      "callee": "bool",
+      "expected_target": null
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/models.py",
+      "line": 30,
+      "callee": "super().label",
+      "expected_target": "shop.models.User.label"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/models.py",
+      "line": 33,
+      "callee": "self.describe",
+      "expected_target": "shop.models.Base.describe"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/services/billing.py",
+      "line": 9,
+      "callee": "clamp",
+      "expected_target": "shop.utils.clamp"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/services/billing.py",
+      "line": 13,
+      "callee": "_apply_discount",
+      "expected_target": "shop.services.billing._apply_discount"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/services/billing.py",
+      "line": 14,
+      "callee": "user.save",
+      "expected_target": "shop.models.User.save"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/services/billing.py",
+      "line": 15,
+      "callee": "format_money",
+      "expected_target": "shop.utils.format_money"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/services/billing.py",
+      "line": 15,
+      "callee": "notify.send",
+      "expected_target": "shop.services.notify.send"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/services/billing.py",
+      "line": 16,
+      "callee": "format_money",
+      "expected_target": "shop.utils.format_money"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/services/notify.py",
+      "line": 8,
+      "callee": "audit",
+      "expected_target": "shop.services.notify.audit"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/services/notify.py",
+      "line": 12,
+      "callee": "format_money",
+      "expected_target": "shop.utils.format_money"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/services/notify.py",
+      "line": 12,
+      "callee": "len",
+      "expected_target": null
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/services/notify.py",
+      "line": 12,
+      "callee": "print",
+      "expected_target": null
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/star.py",
+      "line": 7,
+      "callee": "format_money",
+      "expected_target": "shop.utils.format_money"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/typed_a.py",
+      "line": 9,
+      "callee": "make",
+      "expected_target": "shop.typed_b.make"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/typed_b.py",
+      "line": 16,
+      "callee": "repr",
+      "expected_target": null
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/utils.py",
+      "line": 5,
+      "callee": "round",
+      "expected_target": null
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/utils.py",
+      "line": 5,
+      "callee": "str",
+      "expected_target": null
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/web.py",
+      "line": 23,
+      "callee": "app.route",
+      "expected_target": "shop.web.App.route"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/web.py",
+      "line": 25,
+      "callee": "Admin",
+      "expected_target": "shop.models.Admin"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/web.py",
+      "line": 26,
+      "callee": "charge",
+      "expected_target": "shop.services.billing.charge"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/web.py",
+      "line": 29,
+      "callee": "app.route",
+      "expected_target": "shop.web.App.route"
+    },
+    {
+      "repo": "fixture",
+      "file": "shop/web.py",
+      "line": 31,
+      "callee": "format_money",
+      "expected_target": "shop.utils.format_money"
+    },
+    {
+      "repo": "fixture",
+      "file": "tests/test_billing.py",
+      "line": 6,
+      "callee": "User",
+      "expected_target": "shop.models.User"
+    },
+    {
+      "repo": "fixture",
+      "file": "tests/test_billing.py",
+      "line": 7,
+      "callee": "charge",
+      "expected_target": "shop.services.billing.charge"
+    },
+    {
+      "repo": "fixture",
+      "file": "tests/test_billing.py",
+      "line": 11,
+      "callee": "User",
+      "expected_target": "shop.models.User"
+    },
+    {
+      "repo": "fixture",
+      "file": "tests/test_billing.py",
+      "line": 11,
+      "callee": "charge",
+      "expected_target": "shop.services.billing.charge"
+    },
+    {
+      "repo": "fixture",
+      "file": "tests/test_models.py",
+      "line": 5,
+      "callee": "Admin",
+      "expected_target": "shop.models.Admin"
+    },
+    {
+      "repo": "fixture",
+      "file": "tests/test_web.py",
+      "line": 5,
+      "callee": "checkout",
+      "expected_target": "shop.web.checkout"
+    },
+    {
+      "repo": "fixture",
+      "file": "tests/test_web.py",
+      "line": 9,
+      "callee": "index",
+      "expected_target": "shop.web.index"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 101,
+      "callee": "app_ctx._get_current_object",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 103,
+      "callee": "app_ctx._get_current_object",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 308,
+      "callee": "remove_ctx",
+      "expected_target": "flask.app.remove_ctx"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 324,
+      "callee": "super().__init__",
+      "expected_target": "flask.sansio.app.App.__init__"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 463,
+      "callee": "os.path.join",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 495,
+      "callee": "self.jinja_environment",
+      "expected_target": "flask.templating.Environment"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 698,
+      "callee": "os.environ.get",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 893,
+      "callee": "self._find_error_handler",
+      "expected_target": "flask.sansio.app.App._find_error_handler"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 951,
+      "callee": "self.finalize_request",
+      "expected_target": "flask.app.Flask.finalize_request"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 1077,
+      "callee": "iscoroutinefunction",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 1162,
+      "callee": "_cv_app.get",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 1345,
+      "callee": "sys.exc_info",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 1411,
+      "callee": "self.ensure_sync",
+      "expected_target": "flask.app.Flask.ensure_sync"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 1413,
+      "callee": "chain",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 1418,
+      "callee": "ctx._get_session",
+      "expected_target": "flask.ctx.AppContext._get_session"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/app.py",
+      "line": 1615,
+      "callee": "self.should_ignore_error",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/cli.py",
+      "line": 77,
+      "callee": "_called_with_wrong_args",
+      "expected_target": "flask.cli._called_with_wrong_args"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/cli.py",
+      "line": 183,
+      "callee": "NoAppException",
+      "expected_target": "flask.cli.NoAppException"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/cli.py",
+      "line": 229,
+      "callee": "t.overload",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/cli.py",
+      "line": 604,
+      "callee": "importlib.metadata.entry_points",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/cli.py",
+      "line": 645,
+      "callee": "info.load_app",
+      "expected_target": "flask.cli.ScriptInfo.load_app"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/cli.py",
+      "line": 676,
+      "callee": "super().make_context",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/cli.py",
+      "line": 849,
+      "callee": "click.BadParameter",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/cli.py",
+      "line": 879,
+      "callee": "super_convert",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/cli.py",
+      "line": 915,
+      "callee": "click.option",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/cli.py",
+      "line": 1023,
+      "callee": "f.read",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/config.py",
+      "line": 205,
+      "callee": "types.ModuleType",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/config.py",
+      "line": 302,
+      "callee": "self.from_mapping",
+      "expected_target": "flask.config.Config.from_mapping"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/ctx.py",
+      "line": 115,
+      "callee": "object.__repr__",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/ctx.py",
+      "line": 364,
+      "callee": "self.__class__",
+      "expected_target": "flask.ctx.AppContext"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/ctx.py",
+      "line": 502,
+      "callee": "appcontext_popped.send",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/debughelpers.py",
+      "line": 154,
+      "callee": "info.append",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/helpers.py",
+      "line": 141,
+      "callee": "gen.close",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/helpers.py",
+      "line": 529,
+      "callee": "_prepare_send_file_kwargs",
+      "expected_target": "flask.helpers._prepare_send_file_kwargs"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/helpers.py",
+      "line": 583,
+      "callee": "_prepare_send_file_kwargs",
+      "expected_target": "flask.helpers._prepare_send_file_kwargs"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/helpers.py",
+      "line": 604,
+      "callee": "importlib.util.find_spec",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/json/tag.py",
+      "line": 90,
+      "callee": "self.to_json",
+      "expected_target": "flask.json.tag.JSONTag.to_json"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/json/tag.py",
+      "line": 323,
+      "callee": "dumps",
+      "expected_target": "flask.json.dumps"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/logging.py",
+      "line": 71,
+      "callee": "logging.getLogger",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/app.py",
+      "line": 326,
+      "callee": "self.json_provider_class",
+      "expected_target": "flask.json.provider.DefaultJSONProvider"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/app.py",
+      "line": 650,
+      "callee": "self.url_rule_class",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/app.py",
+      "line": 663,
+      "callee": "t.overload",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/app.py",
+      "line": 774,
+      "callee": "t.overload",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/app.py",
+      "line": 887,
+      "callee": "handler_map.get",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/blueprints.py",
+      "line": 64,
+      "callee": "self.options.get",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/blueprints.py",
+      "line": 302,
+      "callee": "options.get",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/blueprints.py",
+      "line": 412,
+      "callee": "setupmethod",
+      "expected_target": "flask.sansio.scaffold.setupmethod"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/blueprints.py",
+      "line": 493,
+      "callee": "state.app.add_template_filter",
+      "expected_target": "flask.sansio.app.App.add_template_filter"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/blueprints.py",
+      "line": 531,
+      "callee": "setupmethod",
+      "expected_target": "flask.sansio.scaffold.setupmethod"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/blueprints.py",
+      "line": 651,
+      "callee": "s.app.template_context_processors.setdefault",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/blueprints.py",
+      "line": 672,
+      "callee": "setupmethod",
+      "expected_target": "flask.sansio.scaffold.setupmethod"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/scaffold.py",
+      "line": 200,
+      "callee": "defaultdict",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/scaffold.py",
+      "line": 280,
+      "callee": "os.path.join",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/scaffold.py",
+      "line": 295,
+      "callee": "setupmethod",
+      "expected_target": "flask.sansio.scaffold.setupmethod"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/scaffold.py",
+      "line": 369,
+      "callee": "options.pop",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/scaffold.py",
+      "line": 467,
+      "callee": "setupmethod",
+      "expected_target": "flask.sansio.scaffold.setupmethod"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/scaffold.py",
+      "line": 742,
+      "callee": "os.path.commonpath",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sansio/scaffold.py",
+      "line": 759,
+      "callee": "os.path.dirname",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sessions.py",
+      "line": 332,
+      "callee": "s.loads",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sessions.py",
+      "line": 333,
+      "callee": "self.session_class",
+      "expected_target": "flask.sessions.SecureCookieSession"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/sessions.py",
+      "line": 374,
+      "callee": "response.set_cookie",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/templating.py",
+      "line": 44,
+      "callee": "app.create_global_jinja_loader",
+      "expected_target": "flask.sansio.app.App.create_global_jinja_loader"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/templating.py",
+      "line": 147,
+      "callee": "ctx.app.jinja_env.get_or_select_template",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/templating.py",
+      "line": 160,
+      "callee": "_render",
+      "expected_target": "flask.templating._render"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/testing.py",
+      "line": 75,
+      "callee": "urlsplit",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/testing.py",
+      "line": 161,
+      "callee": "app.test_request_context",
+      "expected_target": "flask.app.Flask.test_request_context"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/testing.py",
+      "line": 179,
+      "callee": "self._update_cookies_from_response",
+      "expected_target": null
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/testing.py",
+      "line": 196,
+      "callee": "self._copy_environ",
+      "expected_target": "flask.testing.FlaskClient._copy_environ"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/testing.py",
+      "line": 220,
+      "callee": "self._copy_environ",
+      "expected_target": "flask.testing.FlaskClient._copy_environ"
+    },
+    {
+      "repo": "flask",
+      "file": "src/flask/wrappers.py",
+      "line": 88,
+      "callee": "max_content_length.setter",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/__init__.py",
+      "line": 87,
+      "callee": "charset_normalizer_version.split",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/__init__.py",
+      "line": 92,
+      "callee": "warnings.warn",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/adapters.py",
+      "line": 126,
+      "callee": "super().__init__",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/adapters.py",
+      "line": 295,
+      "callee": "self.proxy_headers",
+      "expected_target": "requests.adapters.HTTPAdapter.proxy_headers"
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/adapters.py",
+      "line": 453,
+      "callee": "_urllib3_request_context",
+      "expected_target": "requests.adapters._urllib3_request_context"
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/adapters.py",
+      "line": 550,
+      "callee": "parsed.geturl",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/adapters.py",
+      "line": 589,
+      "callee": "urlparse",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/adapters.py",
+      "line": 744,
+      "callee": "InvalidHeader",
+      "expected_target": "requests.exceptions.InvalidHeader"
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/api.py",
+      "line": 168,
+      "callee": "request",
+      "expected_target": "requests.api.request"
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/auth.py",
+      "line": 69,
+      "callee": "password.encode",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/auth.py",
+      "line": 71,
+      "callee": "to_native_string",
+      "expected_target": "requests._internal_utils.to_native_string"
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/auth.py",
+      "line": 91,
+      "callee": "overload",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/auth.py",
+      "line": 235,
+      "callee": "os.urandom",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/auth.py",
+      "line": 303,
+      "callee": "cast",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/cookies.py",
+      "line": 132,
+      "callee": "self._headers.getheaders",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/cookies.py",
+      "line": 488,
+      "callee": "new_jar.clear",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/help.py",
+      "line": 46,
+      "callee": "platform.python_implementation",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/models.py",
+      "line": 212,
+      "callee": "new_fields.append",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/models.py",
+      "line": 249,
+      "callee": "encode_multipart_formdata",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/models.py",
+      "line": 445,
+      "callee": "self.prepare_auth",
+      "expected_target": "requests.models.PreparedRequest.prepare_auth"
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/models.py",
+      "line": 657,
+      "callee": "super_len",
+      "expected_target": "requests.utils.super_len"
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/models.py",
+      "line": 900,
+      "callee": "chardet.detect",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/models.py",
+      "line": 979,
+      "callee": "overload",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/sessions.py",
+      "line": 157,
+      "callee": "urlparse",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/sessions.py",
+      "line": 247,
+      "callee": "self.rebuild_method",
+      "expected_target": "requests.sessions.SessionRedirectMixin.rebuild_method"
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/sessions.py",
+      "line": 501,
+      "callee": "OrderedDict",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/sessions.py",
+      "line": 774,
+      "callee": "kwargs.get",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/sessions.py",
+      "line": 897,
+      "callee": "self.adapters.pop",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/utils.py",
+      "line": 155,
+      "callee": "d.items",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/utils.py",
+      "line": 184,
+      "callee": "os.fstat",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/utils.py",
+      "line": 295,
+      "callee": "os.path.exists",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/utils.py",
+      "line": 321,
+      "callee": "os.write",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/utils.py",
+      "line": 562,
+      "callee": "param.find",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/utils.py",
+      "line": 769,
+      "callee": "string_network.count",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/utils.py",
+      "line": 858,
+      "callee": "hostname.endswith",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/utils.py",
+      "line": 991,
+      "callee": "param.split",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/utils.py",
+      "line": 1022,
+      "callee": "sample.count",
+      "expected_target": null
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/utils.py",
+      "line": 1155,
+      "callee": "UnrewindableBodyError",
+      "expected_target": "requests.exceptions.UnrewindableBodyError"
+    }
+  ],
+  "excluded_sites": [
+    {
+      "repo": "fixture",
+      "file": "shop/services/notify.py",
+      "line": 17,
+      "callee": "person.save",
+      "why": "receiver is an untyped loop variable; two classes define save(); no human can name one target"
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/models.py",
+      "line": 691,
+      "callee": "auth_handler",
+      "why": "assigned in two branches (an HTTPBasicAuth instance or a cast callable); no single target exists"
+    },
+    {
+      "repo": "requests",
+      "file": "src/requests/adapters.py",
+      "line": 285,
+      "callee": "SOCKSProxyManager",
+      "why": "try/except ImportError binds the name to urllib3's class OR to a local fallback stub, so there is no single target. It was first labelled null; that was a labelling error (the module's fallback def was not read) found when the tool resolved it, and the label was withdrawn rather than 'corrected' to whatever the tool said."
+    }
+  ],
+  "method": "flask: seeded uniform random sample (seed 20260919, 70 of 884 non-builtin call sites in src/flask). requests: same procedure, 40 of 691 sites in src/requests. fixture: every call site in the sample project. Sites are drawn before looking at what Faultline resolves; labels come from reading the source."
+}

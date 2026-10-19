@@ -1,0 +1,13 @@
+**/__pycache__
+**/*.pyc
+**/.venv
+**/node_modules
+**/.pytest_cache
+**/.mypy_cache
+**/.ruff_cache
+**/.git
+frontend/dist
+backend/benchmarks/results/*.tmp
+**/.cache
+**/.git
+*.log
